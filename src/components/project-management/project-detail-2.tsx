@@ -1053,7 +1053,7 @@ export function ProjectManagementProjectDetail2() {
           </div>
         </div>
 
-        <div className="hidden xl:flex">
+        <div className="border-border hidden border-l xl:flex">
           <RightRail />
         </div>
 

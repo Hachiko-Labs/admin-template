@@ -25,3 +25,7 @@ pnpm run dev
 - TypeScript
 - Eslint v9
 - Prettier
+
+## License
+
+This template is covered by the license available at https://www.shadcnblocks.com/license

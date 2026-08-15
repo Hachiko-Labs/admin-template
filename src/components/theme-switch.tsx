@@ -17,6 +17,7 @@ interface ThemeSwitchProps {
   align?: "start" | "center" | "end";
   contentClassName?: string;
   triggerClassName?: string;
+  triggerId?: string;
   triggerSize?: ButtonProps["size"];
   triggerVariant?: ButtonProps["variant"];
 }
@@ -25,6 +26,7 @@ export function ThemeSwitch({
   align = "end",
   contentClassName,
   triggerClassName,
+  triggerId,
   triggerSize = "icon",
   triggerVariant = "ghost",
 }: ThemeSwitchProps = {}) {
@@ -34,6 +36,7 @@ export function ThemeSwitch({
     <DropdownMenu modal={false}>
       <DropdownMenuTrigger asChild>
         <Button
+          {...(triggerId ? { id: triggerId } : {})}
           variant={triggerVariant}
           size={triggerSize}
           className={cn("scale-95 rounded-full", triggerClassName)}

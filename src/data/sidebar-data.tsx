@@ -21,10 +21,15 @@ import {
 } from "@tabler/icons-react";
 import {
   AudioWaveform,
+  CreditCard,
   FolderKanban,
   GalleryVerticalEnd,
   Inbox,
+  ReceiptText,
+  Repeat,
   Truck,
+  UserRound,
+  Webhook,
 } from "lucide-react";
 
 import { projects as todoProjects } from "@/app/(admin)/todo/data/data";
@@ -398,6 +403,191 @@ export const sidebarData: SidebarData = {
             {
               title: "Inbox Email 1",
               url: "/project-management/inbox-email-1",
+            },
+          ],
+        },
+      ],
+    },
+    {
+      title: "Payment Processor",
+      items: [
+        {
+          title: "Dashboard",
+          icon: IconLayoutDashboard,
+          items: [
+            {
+              title: "Dashboard 1",
+              url: "/payment-processor/dashboard-1",
+            },
+            {
+              title: "Dashboard 2",
+              url: "/payment-processor/dashboard-2",
+            },
+            {
+              title: "Dashboard 3",
+              url: "/payment-processor/dashboard-3",
+            },
+            {
+              title: "Dashboard 4",
+              url: "/payment-processor/dashboard-4",
+            },
+            {
+              title: "Dashboard 5",
+              url: "/payment-processor/dashboard-5",
+            },
+            {
+              title: "Dashboard 6",
+              url: "/payment-processor/dashboard-6",
+            },
+          ],
+        },
+        {
+          title: "Transactions",
+          icon: CreditCard,
+          items: [
+            {
+              title: "Transactions",
+              url: "/payment-processor/transactions",
+            },
+            {
+              title: "Transactions List 2",
+              url: "/payment-processor/transactions-list-2",
+            },
+            {
+              title: "Transaction Detail",
+              url: "/payment-processor/transaction-detail",
+            },
+            {
+              title: "Transaction Detail 2",
+              url: "/payment-processor/transaction-detail-2",
+            },
+          ],
+        },
+        {
+          title: "Customers",
+          icon: UserRound,
+          items: [
+            {
+              title: "Customers",
+              url: "/payment-processor/customers",
+            },
+            {
+              title: "Customers List 2",
+              url: "/payment-processor/customers-list-2",
+            },
+            {
+              title: "Customer Detail",
+              url: "/payment-processor/customer-detail",
+            },
+            {
+              title: "Customer Detail 2",
+              url: "/payment-processor/customer-detail-2",
+            },
+            {
+              title: "Customer Detail 3",
+              url: "/payment-processor/customer-detail-3",
+            },
+            {
+              title: "Enterprise Client Detail",
+              url: "/payment-processor/enterprise-client-detail",
+            },
+          ],
+        },
+        {
+          title: "Subscriptions",
+          icon: Repeat,
+          items: [
+            {
+              title: "Subscriptions",
+              url: "/payment-processor/subscriptions",
+            },
+            {
+              title: "Subscriptions 2",
+              url: "/payment-processor/subscriptions-2",
+            },
+            {
+              title: "Subscriptions 3",
+              url: "/payment-processor/subscriptions-3",
+            },
+            {
+              title: "Subscriptions 4",
+              url: "/payment-processor/subscriptions-4",
+            },
+            {
+              title: "Create Subscription",
+              url: "/payment-processor/create-subscription",
+            },
+            {
+              title: "Subscription Detail",
+              url: "/payment-processor/subscription-detail",
+            },
+          ],
+        },
+        {
+          title: "Invoices",
+          icon: ReceiptText,
+          items: [
+            {
+              title: "Invoice List",
+              url: "/payment-processor/invoice-list",
+            },
+            {
+              title: "Invoice List 2",
+              url: "/payment-processor/invoice-list-2",
+            },
+            {
+              title: "Invoice List 3",
+              url: "/payment-processor/invoice-list-3",
+            },
+            {
+              title: "Invoice List 4",
+              url: "/payment-processor/invoice-list-4",
+            },
+            {
+              title: "Invoice List 5",
+              url: "/payment-processor/invoice-list-5",
+            },
+            {
+              title: "Create Invoice",
+              url: "/payment-processor/create-invoice",
+            },
+            {
+              title: "Create Invoice 2",
+              url: "/payment-processor/create-invoice-2",
+            },
+            {
+              title: "Create Invoice 3",
+              url: "/payment-processor/create-invoice-3",
+            },
+            {
+              title: "Invoice Detail",
+              url: "/payment-processor/invoice-detail",
+            },
+            {
+              title: "Invoice Detail 2",
+              url: "/payment-processor/invoice-detail-2",
+            },
+            {
+              title: "Invoice Detail 3",
+              url: "/payment-processor/invoice-detail-3",
+            },
+          ],
+        },
+        {
+          title: "Developers",
+          icon: Webhook,
+          items: [
+            {
+              title: "Webhooks",
+              url: "/payment-processor/webhooks",
+            },
+            {
+              title: "Payment Workflow",
+              url: "/payment-processor/payment-workflow",
+            },
+            {
+              title: "Delivery Simulator",
+              url: "/payment-processor/delivery-simulator",
             },
           ],
         },

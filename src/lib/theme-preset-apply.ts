@@ -5,6 +5,7 @@ import {
 import { defaultPresets } from "@/lib/theme-presets";
 
 export const THEME_PRESET_STORAGE_KEY = "theme-preset";
+export const THEME_PRESET_CHANGE_EVENT = "theme-preset-change";
 
 export type MergedThemeStyles = {
   light: Record<string, string>;
@@ -52,12 +53,14 @@ export function applyThemePresetToDocument(presetId: string): void {
   const existing = document.getElementById(STYLE_ID);
   if (presetId === "default") {
     existing?.remove();
+    window.dispatchEvent(new Event(THEME_PRESET_CHANGE_EVENT));
     return;
   }
 
   const merged = getMergedStylesForPreset(presetId);
   if (!merged) {
     existing?.remove();
+    window.dispatchEvent(new Event(THEME_PRESET_CHANGE_EVENT));
     return;
   }
 
@@ -69,6 +72,7 @@ export function applyThemePresetToDocument(presetId: string): void {
     document.head.appendChild(el);
   }
   el.textContent = css;
+  window.dispatchEvent(new Event(THEME_PRESET_CHANGE_EVENT));
 }
 
 export function getPresetLabel(presetId: string): string {

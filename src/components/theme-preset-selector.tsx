@@ -54,9 +54,13 @@ function ThemeSwatches({
 export function ThemePresetSelector({
   className,
   align = "end",
+  triggerId,
+  contentId,
 }: {
   className?: string;
   align?: "start" | "center" | "end";
+  triggerId?: string;
+  contentId?: string;
 }) {
   const { resolvedTheme } = useTheme();
   const [mounted, setMounted] = React.useState(false);
@@ -114,6 +118,8 @@ export function ThemePresetSelector({
     <Popover open={open} onOpenChange={setOpen}>
       <PopoverTrigger asChild>
         <Button
+          {...(triggerId ? { id: triggerId } : {})}
+          {...(contentId ? { "aria-controls": contentId } : {})}
           variant="outline"
           size="sm"
           className={cn(
@@ -130,6 +136,7 @@ export function ThemePresetSelector({
         </Button>
       </PopoverTrigger>
       <PopoverContent
+        {...(contentId ? { id: contentId } : {})}
         align={align}
         className="w-[min(100vw-1.5rem,22rem)] p-0"
         sideOffset={8}

@@ -11,7 +11,6 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Separator } from "@/components/ui/separator";
-import { nofitySubmittedValues } from "@/lib/notify-submitted-values";
 
 import { ApiRequestsChart } from "./components/api-requests-chart";
 import { ApiResponseTimeChart } from "./components/api-response-time-chart";
@@ -43,12 +42,10 @@ export default function OverviewPage() {
               </SelectContent>
             </Select>
             <DateRangePicker
-              onUpdate={(values) => nofitySubmittedValues(values)}
               initialDateFrom="2023-01-01"
               initialDateTo="2023-12-31"
-              align="start"
+              align="end"
               locale="en-GB"
-              showCompare={false}
             />
           </div>
         </div>

@@ -74,6 +74,7 @@ export function HeaderNotifications() {
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Button
+          id="header-notifications-trigger"
           variant="outline"
           size="icon"
           className="relative size-9"

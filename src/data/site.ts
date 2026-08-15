@@ -14,6 +14,7 @@ export const site = {
     original: "Original App",
     developers: "Developers App",
     "project-management": "Project Management",
+    "payment-processor": "Payment Processor",
     todo: "Todo App",
   },
 } as const;

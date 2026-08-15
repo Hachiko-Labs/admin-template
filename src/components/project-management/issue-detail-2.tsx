@@ -331,7 +331,7 @@ function PropertyGrid() {
         return (
           <div
             key={property.label}
-            className="bg-card min-w-0 rounded-md border px-3 py-3 sm:border-0 sm:bg-transparent sm:px-5 sm:py-0 2xl:border-r 2xl:last:border-r-0"
+            className="bg-card min-w-0 rounded-md border px-3 py-3 sm:rounded-none sm:border-0 sm:bg-transparent sm:px-5 sm:py-0 2xl:border-r 2xl:last:border-r-0"
           >
             <div className="text-muted-foreground mb-2 text-xs font-medium">
               {property.label}

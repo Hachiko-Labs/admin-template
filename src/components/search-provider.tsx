@@ -9,6 +9,11 @@ interface SearchContextType {
   setOpen: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
+const defaultSearchContext: SearchContextType = {
+  open: false,
+  setOpen: () => undefined,
+};
+
 const SearchContext = createContext<SearchContextType | null>(null);
 
 interface Props {
@@ -26,11 +31,5 @@ export default function SearchProvider({ children, value }: Props) {
 }
 
 export const useSearch = () => {
-  const searchContext = useContext(SearchContext);
-
-  if (!searchContext) {
-    throw new Error("useSearch has to be used within <SearchContext.Provider>");
-  }
-
-  return searchContext;
+  return useContext(SearchContext) ?? defaultSearchContext;
 };
