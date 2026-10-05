@@ -21,7 +21,7 @@ export default function EcommerceOrdersGroupLayout({ children }: Props) {
         sectionSegment={EC}
         breadcrumbOverrides={orderOverrides}
       />
-      <div className="min-h-0 flex-1 overflow-auto has-[>[data-layout=fixed]]:flex has-[>[data-layout=fixed]]:overflow-hidden">
+      <div className="flex min-h-0 flex-1 flex-col overflow-auto">
         {children}
       </div>
     </div>

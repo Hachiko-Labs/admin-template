@@ -1,24 +1,34 @@
-# Hardening config consumed by pnpm >=10.26.
-# DO NOT add packages to allowBuilds without a matching code-review approval -
-# every entry here is a standing privilege that becomes a vector if the
-# package is later compromised.
+# pnpm >=12 reads install policy from this file only.
+# allowBuilds values must be booleans. An empty list is invalid, and a
+# placeholder string makes every later pnpm command fail to parse this file.
 packages:
   - "."
 
-allowBuilds: []
+# Only these dependency lifecycle scripts may run. strictDepBuilds fails the
+# install if any other package has one, instead of skipping it silently.
+allowBuilds:
+  # napi-postinstall: downloads the platform binding for ESLint's import resolver.
+  unrs-resolver: true
+  # Prints a one-time MSW setup hint. The script swallows its own failure.
+  msw: true
 strictDepBuilds: true
 
-# Block install of versions newer than 3 days (4320 minutes).
-# Would have prevented Axios (live ~3 hours), qix, Payblocks.
+overrides:
+  eslint-import-resolver-typescript: 3.10.0
+  semver@^6: ^7.7.4
+
+engineStrict: true
+
+# Reject versions published in the last 3 days (4320 minutes).
 minimumReleaseAge: 4320
 
-# Treat provenance regressions as a supply-chain signal.
+# Refuse a release that lost provenance relative to the one before it.
 trustPolicy: no-downgrade
 trustPolicyExclude:
+  # Pinned via recharts. A later release regained provenance, so this exact
+  # version is the only one that trips no-downgrade.
   - "reselect@5.1.1"
 
-# Do not re-enable blockExoticSubdeps here. When minimumReleaseAge or
-# trustPolicy filters an exact-pinned registry version, pnpm can report the
-# candidate as unresolved and false-flag it as exotic. Exotic transitive specs
-# are covered by CODEOWNERS review on pnpm-lock.yaml plus CI frozen-lockfile
-# installs, where git/http/file/workspace swaps are visible in the lock diff.
+# Leave blockExoticSubdeps off. minimumReleaseAge and trustPolicy can make
+# pnpm report an exact registry pin as exotic. Real git/http/file swaps show
+# up in the lockfile diff on a frozen install.

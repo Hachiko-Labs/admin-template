@@ -1,0 +1,50 @@
+[
+  {
+    "slug": "agents-sdk",
+    "origin": "https://github.com/cloudflare/skills/blob/d924cd8f59e75e08fd3dd52843bb2776de35c77e/skills/agents-sdk/SKILL.md"
+  },
+  {
+    "slug": "cloudflare",
+    "origin": "https://github.com/cloudflare/skills/blob/d924cd8f59e75e08fd3dd52843bb2776de35c77e/skills/cloudflare/SKILL.md"
+  },
+  {
+    "slug": "cloudflare-email-service",
+    "origin": "https://github.com/cloudflare/skills/blob/d924cd8f59e75e08fd3dd52843bb2776de35c77e/skills/cloudflare-email-service/SKILL.md"
+  },
+  {
+    "slug": "cloudflare-one",
+    "origin": "https://github.com/cloudflare/skills/blob/d924cd8f59e75e08fd3dd52843bb2776de35c77e/skills/cloudflare-one/SKILL.md"
+  },
+  {
+    "slug": "cloudflare-one-migrations",
+    "origin": "https://github.com/cloudflare/skills/blob/d924cd8f59e75e08fd3dd52843bb2776de35c77e/skills/cloudflare-one-migrations/SKILL.md"
+  },
+  {
+    "slug": "durable-objects",
+    "origin": "https://github.com/cloudflare/skills/blob/d924cd8f59e75e08fd3dd52843bb2776de35c77e/skills/durable-objects/SKILL.md"
+  },
+  {
+    "slug": "nextjs-on-cloudflare",
+    "origin": "https://github.com/cloudflare/skills/blob/d924cd8f59e75e08fd3dd52843bb2776de35c77e/skills/nextjs-on-cloudflare/SKILL.md"
+  },
+  {
+    "slug": "sandbox-stable",
+    "origin": "https://github.com/cloudflare/skills/blob/d924cd8f59e75e08fd3dd52843bb2776de35c77e/skills/sandbox-stable/SKILL.md"
+  },
+  {
+    "slug": "turnstile-spin",
+    "origin": "https://github.com/cloudflare/skills/blob/d924cd8f59e75e08fd3dd52843bb2776de35c77e/skills/turnstile-spin/SKILL.md"
+  },
+  {
+    "slug": "web-perf",
+    "origin": "https://github.com/cloudflare/skills/blob/d924cd8f59e75e08fd3dd52843bb2776de35c77e/skills/web-perf/SKILL.md"
+  },
+  {
+    "slug": "workers-best-practices",
+    "origin": "https://github.com/cloudflare/skills/blob/d924cd8f59e75e08fd3dd52843bb2776de35c77e/skills/workers-best-practices/SKILL.md"
+  },
+  {
+    "slug": "wrangler",
+    "origin": "https://github.com/cloudflare/skills/blob/d924cd8f59e75e08fd3dd52843bb2776de35c77e/skills/wrangler/SKILL.md"
+  }
+]

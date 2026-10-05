@@ -54,7 +54,11 @@ const INITIAL_NOTIFICATIONS: HeaderNotification[] = [
   },
 ];
 
-export function HeaderNotifications() {
+export function HeaderNotifications({
+  appearance = "button",
+}: {
+  appearance?: "button" | "icon";
+}) {
   const [notifications, setNotifications] = React.useState(
     INITIAL_NOTIFICATIONS,
   );
@@ -75,9 +79,14 @@ export function HeaderNotifications() {
       <DropdownMenuTrigger asChild>
         <Button
           id="header-notifications-trigger"
-          variant="outline"
+          variant={appearance === "icon" ? "ghost" : "outline"}
           size="icon"
-          className="relative size-9"
+          className={cn(
+            "relative shrink-0",
+            appearance === "icon"
+              ? "text-muted-foreground hover:text-foreground size-8 rounded-[4px]"
+              : "size-9",
+          )}
           aria-label={
             unreadCount
               ? `Notifications, ${unreadCount} unread`
@@ -86,9 +95,16 @@ export function HeaderNotifications() {
         >
           <Bell className="size-4" aria-hidden="true" />
           {unreadCount > 0 ? (
-            <span className="bg-destructive text-destructive-foreground absolute -top-0.5 -right-0.5 flex h-4 min-w-4 items-center justify-center rounded-full px-1 text-[10px] font-medium tabular-nums">
-              {unreadCount > 9 ? "9+" : unreadCount}
-            </span>
+            appearance === "icon" ? (
+              <span
+                aria-hidden="true"
+                className="bg-primary ring-sidebar absolute top-2 right-2 size-1.5 rounded-full ring-2"
+              />
+            ) : (
+              <span className="bg-destructive text-destructive-foreground absolute -top-0.5 -right-0.5 flex h-4 min-w-4 items-center justify-center rounded-full px-1 text-[10px] font-medium tabular-nums">
+                {unreadCount > 9 ? "9+" : unreadCount}
+              </span>
+            )
           ) : null}
         </Button>
       </DropdownMenuTrigger>

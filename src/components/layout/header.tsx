@@ -31,10 +31,10 @@ export function Header({ title: titleProp }: HeaderProps) {
   const { setOpen: setCommandOpen } = useSearch();
 
   return (
-    <header className="bg-background grid w-full min-w-0 grid-cols-[auto_minmax(0,1fr)_auto] items-center gap-2 border-b px-4 py-4 sm:gap-3 sm:px-6">
-      <SidebarTrigger className="size-8 shrink-0" />
+    <header className="bg-background grid h-12 w-full min-w-0 shrink-0 grid-cols-[auto_minmax(0,1fr)_auto] items-center gap-2 px-3 shadow-[inset_0_-1px_0_var(--border)] md:h-14 md:grid-cols-[minmax(0,1fr)_auto]">
+      <SidebarTrigger className="size-8 shrink-0 md:hidden" />
       <div className="min-w-0">
-        <h1 className="truncate text-base font-medium">{title}</h1>
+        <h1 className="truncate text-sm font-medium">{title}</h1>
       </div>
 
       <div className="flex min-w-0 shrink-0 items-center gap-2">

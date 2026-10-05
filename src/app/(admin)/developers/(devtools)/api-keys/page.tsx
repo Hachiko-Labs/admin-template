@@ -1,7 +1,9 @@
 import { IconRefresh } from "@tabler/icons-react";
 import { format } from "date-fns";
 import { Terminal } from "lucide-react";
+import { io } from "next/cache";
 import Link from "next/link";
+import { Suspense } from "react";
 
 import { CopyButton } from "@/components/copy-button";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
@@ -71,9 +73,13 @@ export default function ApiKeysPage() {
               <div className="flex items-center justify-between">
                 <h1 className="text-sm font-semibold">Global Version</h1>
                 <div className="flex items-center gap-4">
-                  <p className="text-sm font-medium">
-                    {format(new Date(), "dd-MMM-yyyy")}
-                  </p>
+                  <Suspense
+                    fallback={
+                      <p className="text-sm font-medium">Loading date</p>
+                    }
+                  >
+                    <CurrentVersionDate />
+                  </Suspense>
                   <Badge variant="secondary">Latest Version</Badge>
                 </div>
               </div>
@@ -222,5 +228,12 @@ export default function ApiKeysPage() {
         <TabsContent value="account">Account</TabsContent>
       </Tabs>
     </main>
+  );
+}
+
+async function CurrentVersionDate() {
+  await io();
+  return (
+    <p className="text-sm font-medium">{format(new Date(), "dd-MMM-yyyy")}</p>
   );
 }

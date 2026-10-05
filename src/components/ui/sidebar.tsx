@@ -4,6 +4,11 @@ import * as React from "react"
 import { Slot as SlotPrimitive } from "radix-ui"
 import { VariantProps, cva } from "class-variance-authority"
 import { PanelLeftIcon } from "lucide-react"
+import {
+  SIDEBAR_COOKIE_NAME,
+  SIDEBAR_WIDTH,
+  SIDEBAR_WIDTH_ICON,
+} from "@/lib/sidebar-constants"
 import { cn } from "@/lib/utils"
 import { useIsMobile } from "@/hooks/use-mobile"
 import { Button } from "@/components/ui/button"
@@ -24,11 +29,8 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip"
 
-const SIDEBAR_COOKIE_NAME = "sidebar_state"
 const SIDEBAR_COOKIE_MAX_AGE = 60 * 60 * 24 * 7
-const SIDEBAR_WIDTH = "16rem"
 const SIDEBAR_WIDTH_MOBILE = "18rem"
-const SIDEBAR_WIDTH_ICON = "3rem"
 const SIDEBAR_KEYBOARD_SHORTCUT = "b"
 
 type SidebarContext = {
@@ -90,6 +92,10 @@ const SidebarProvider = React.forwardRef<
 
         // This sets the cookie to keep the sidebar state.
         document.cookie = `${SIDEBAR_COOKIE_NAME}=${openState}; path=/; max-age=${SIDEBAR_COOKIE_MAX_AGE}`
+        document.documentElement.style.setProperty(
+          "--admin-loading-sidebar-width",
+          openState ? SIDEBAR_WIDTH : SIDEBAR_WIDTH_ICON
+        )
       },
       [setOpenProp, open]
     )

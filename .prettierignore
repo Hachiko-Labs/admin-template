@@ -1,7 +1,29 @@
 src/components/ui
 
+# Vendored/reference assets are kept byte-oriented or upstream-shaped rather
+# than reformatted as application source.
+public/ai-chat/skill-library
+src/lib/vector-animation/sample.json
+src/lib/website-editor/menus.json
+
+# The application runtime engines preserve the formatting of the imported
+# reference implementations; lint/type safety is enforced separately.
+src/lib/document-editor
+src/lib/editorial-layout
+src/lib/image-editor
+src/lib/interface-designer
+src/lib/motion-designer
+src/lib/photo-developer
+src/lib/presentation-reference
+src/lib/spreadsheet
+src/lib/vector-animation
+src/lib/vector-designer
+src/lib/video-editor
+src/lib/website-editor
+
 node_modules
 .next
+.next-test
 out
 build
 dist

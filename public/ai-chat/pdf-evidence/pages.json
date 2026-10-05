@@ -1,0 +1,131 @@
+[
+  {
+    "number": 1,
+    "title": "Where new teams get stuck",
+    "section": "Overview",
+    "width": 612,
+    "height": 792,
+    "image": "/ai-chat/pdf-evidence/page-1.png",
+    "blocks": [
+      {
+        "id": "overview",
+        "title": "A useful first result comes too late",
+        "text": "New teams understand the value of a shared workspace, but the first-run experience asks them to make configuration decisions before they have done meaningful work together. The opportunity is to shorten the path from a blank workspace to one completed task.",
+        "rect": {
+          "x": 50,
+          "y": 214,
+          "width": 512,
+          "height": 68
+        }
+      },
+      {
+        "id": "study",
+        "title": "Study at a glance",
+        "text": "We observed 12 teams during their first week and followed up with a short interview. Sessions covered project creation, inviting a teammate, importing a small dataset, and completing a shared task. This report describes patterns in those sessions, not a population estimate.",
+        "rect": {
+          "x": 50,
+          "y": 325,
+          "width": 512,
+          "height": 68
+        }
+      },
+      {
+        "id": "recommendation",
+        "title": "Recommendation",
+        "text": "Test a three-step checklist: create one project, invite one teammate, and complete one shared task. Keep advanced configuration available, but remove it from the required first-run path. Measure whether teams reach a shared result sooner.",
+        "rect": {
+          "x": 50,
+          "y": 436,
+          "width": 512,
+          "height": 68
+        }
+      }
+    ]
+  },
+  {
+    "number": 2,
+    "title": "The friction is in the handoff",
+    "section": "Observed friction",
+    "width": 612,
+    "height": 792,
+    "image": "/ai-chat/pdf-evidence/page-2.png",
+    "blocks": [
+      {
+        "id": "setup-friction",
+        "title": "01 / Setup crowds out the first task",
+        "text": "Eight of the 12 observed teams opened advanced settings before completing their first shared task. Six of those teams asked the facilitator which settings were required. The questions were about whether it was safe to proceed, rather than how to use a specific control.",
+        "rect": {
+          "x": 50,
+          "y": 214,
+          "width": 512,
+          "height": 68
+        }
+      },
+      {
+        "id": "invitation-friction",
+        "title": "02 / Invitations arrive without a next step",
+        "text": "Five teams invited a teammate but did not assign or share a task in the same session. Invitees could enter the workspace, yet the invitation did not explain what they should do first. A small, concrete shared task would give both people a useful starting point.",
+        "rect": {
+          "x": 50,
+          "y": 325,
+          "width": 512,
+          "height": 68
+        }
+      },
+      {
+        "id": "recovery-friction",
+        "title": "03 / Import errors force teams to retrace steps",
+        "text": "Four teams encountered an invalid row during their first import. Three restarted the upload because they could not tell whether valid rows had been saved. The preview needs a clear count of accepted and rejected rows, plus a way to retry only the rejected rows.",
+        "rect": {
+          "x": 50,
+          "y": 436,
+          "width": 512,
+          "height": 68
+        }
+      }
+    ]
+  },
+  {
+    "number": 3,
+    "title": "A focused pilot, with clear limits",
+    "section": "Pilot and limitations",
+    "width": 612,
+    "height": 792,
+    "image": "/ai-chat/pdf-evidence/page-3.png",
+    "blocks": [
+      {
+        "id": "pilot",
+        "title": "Pilot plan",
+        "text": "Run a two-week pilot in 20 new workspaces. Compare the share of teams that complete a shared task within seven days and their time to that first result. Also track support requests about setup and import recovery. Review recordings before interpreting a change in the numbers.",
+        "rect": {
+          "x": 50,
+          "y": 214,
+          "width": 512,
+          "height": 68
+        }
+      },
+      {
+        "id": "scope",
+        "title": "What this study cannot tell us",
+        "text": "The sample includes only small teams using the product for the first time. It does not represent enterprise administrators, returning teams, or long-term retention. The observations identify possible friction; they do not establish that a checklist will improve activation.",
+        "rect": {
+          "x": 50,
+          "y": 325,
+          "width": 512,
+          "height": 68
+        }
+      },
+      {
+        "id": "decision",
+        "title": "Decision checkpoint",
+        "text": "Continue only if the checklist reduces confusion without hiding required controls. If teams finish setup faster but still fail to collaborate, revise the handoff to the first shared task. Keep the current setup flow available throughout the pilot.",
+        "rect": {
+          "x": 50,
+          "y": 436,
+          "width": 512,
+          "height": 68
+        }
+      }
+    ]
+  }
+]

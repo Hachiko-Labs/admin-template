@@ -16,6 +16,11 @@ import {
 
 import { Toaster } from "@/components/ui/sonner";
 import { site } from "@/data/site";
+import {
+  SIDEBAR_COOKIE_NAME,
+  SIDEBAR_WIDTH,
+  SIDEBAR_WIDTH_ICON,
+} from "@/lib/sidebar-constants";
 import { cn } from "@/lib/utils";
 
 import { Providers } from "./providers";
@@ -109,6 +114,16 @@ export default function RootLayout({
           spaceMono.variable,
         )}
       >
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `document.documentElement.style.setProperty(
+              "--admin-loading-sidebar-width",
+              document.cookie.split(";").some((part) => part.trim() === "${SIDEBAR_COOKIE_NAME}=false")
+                ? "${SIDEBAR_WIDTH_ICON}"
+                : "${SIDEBAR_WIDTH}"
+            );`,
+          }}
+        />
         <Providers>{children}</Providers>
         <Toaster />
       </body>
